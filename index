@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Orb Cascade - Prototype</title>
+  <style>
+    html,body { height:100%; margin:0; background:#0b1020; color:#e6eef8; font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-tap-highlight-color: transparent; }
+    #gameRoot { display:flex; justify-content:center; align-items:flex-start; height:100%; padding-top:10px; box-sizing:border-box; }
+    #canvasWrap { position:relative; width:360px; height:640px; background:#071026; border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.6); }
+    canvas { width:100%; height:100%; display:block; background:linear-gradient(#081025,#06151f 60%); }
+    #uiTop { position:absolute; left:10px; top:8px; right:10px; display:flex; justify-content:space-between; align-items:center; font-size:14px; }
+    #uiBottom { position:absolute; left:10px; right:10px; bottom:8px; display:flex; justify-content:space-between; align-items:center; }
+    .statBox { background:rgba(255,255,255,0.04); padding:6px 8px; border-radius:8px; backdrop-filter: blur(4px); }
+    #fireBtn { width:74px; height:40px; border-radius:8px; background:linear-gradient(#34b3ff,#0a78c1); border:none; color:white; font-weight:700; }
+    #guideHint { position:absolute; left:10px; bottom:56px; color:#9fbcd8; font-size:12px; }
+    #settingsBtn { background:transparent; border:none; color:#9fbcd8; font-size:14px; }
+    #footerInfo { position:absolute; left:10px; bottom:8px; font-size:11px; color:#90aecd; }
+  </style>
+</head>
+<body>
+  <div id="gameRoot">
+    <div id="canvasWrap">
+      <div id="uiTop">
+        <div class="statBox" id="scoreBox">Score: 0</div>
+        <div class="statBox" id="shotsBox">Shots: 20</div>
+        <div class="statBox" id="flowBox">Flow: 0s</div>
+      </div>
+
+      <canvas id="gameCanvas" width="360" height="640"></canvas>
+
+      <div id="guideHint">Drag up to aim. Release to shoot. Space = shoot (PC)</div>
+
+      <div id="uiBottom">
+        <button id="settingsBtn">⚙</button>
+        <button id="fireBtn">Fire</button>
+      </div>
+
+      <div id="footerInfo">Prototype — Orb Cascade</div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
