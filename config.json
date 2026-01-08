@@ -1,0 +1,86 @@
+{
+  "shotsPerGame": 20,
+  "orbRadius": 10,
+  "fire": { "min": 12, "max": 26 },
+  "physics": {
+    "gravity": 0.35,
+    "v_max": 28,
+    "v_min": 2,
+    "accelPerFrame": 1.02,
+    "dragPerFrame": 0.98
+  },
+  "warp": { "cooldown": 0.5 },
+  "scores": {
+    "portals": { "blue": 100, "purple": 150, "gold": 200 },
+    "gate": 20,
+    "energy": { "gate": 2, "default": 2, "gold": 10, "onMiss": 1 }
+  },
+  "bonus": {
+    "baseProb": 0.12,
+    "cap": 0.25
+  },
+  "flow": {
+    "baseDuration": 20,
+    "scoreMultiplier": 1.5,
+    "energyMultiplier": 1.5,
+    "extendProb": 0.18,
+    "extendSeconds": 10,
+    "extendCap": 30
+  },
+  "board": {
+    "presets": [
+      {
+        "panels": [
+          [120,420,600,500],
+          [80,300,420,360],
+          [300,220,680,260],
+          [40,540,280,620]
+        ],
+        "zones": [
+          [200,200,120,80,"accel"],
+          [360,420,150,90,"drag"]
+        ],
+        "warps": [
+          [140,160,36,  540,260,36]
+        ],
+        "gates": [
+          [180,480,260,520]
+        ],
+        "portals": 3
+      },
+      {
+        "panels": [
+          [80,360,560,420],
+          [220,240,260,360],
+          [480,320,640,380]
+        ],
+        "zones": [
+          [300,140,140,80,"accel"]
+        ],
+        "warps": [
+          [120,220,36,  500,180,36]
+        ],
+        "gates": [
+          [140,460,300,500],
+          [360,460,520,500]
+        ],
+        "portals": 3
+      },
+      {
+        "panels": [
+          [60,280,420,340],
+          [360,380,700,440],
+          [200,520,560,600]
+        ],
+        "zones": [
+          [180,410,120,70,"drag"]
+        ],
+        "warps": [],
+        "gates": [
+          [260,460,380,500]
+        ],
+        "portals": 3
+      }
+    ]
+  }
+}
